@@ -1,0 +1,70 @@
+/* handy css variables from https://open-props.style */
+@import 'open-props/easings';
+@import 'open-props/shadows';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+		-webkit-font-smoothing: antialiased;
+		isolation: isolate;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 10svh;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+
+	:root {
+		--font-sans: system-ui, sans-serif;
+		--padding-inline: clamp(1rem, 5vw, 3rem);
+		--radius: 1rem;
+	}
+
+	/* light theme setup */
+	:root {
+		color-scheme: light;
+	}
+
+	/* dark theme setup */
+	[data-theme='dark'] {
+		color-scheme: dark;
+	}
+}
