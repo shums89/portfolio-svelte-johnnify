@@ -9,6 +9,9 @@ declare global {
   interface Windows {
     toggleTheme?(): void
   }
+
+  // for enhanced images with query params such as w=768
+  declare module '*&enhanced'
   
 	namespace App {
 		// interface Error {}

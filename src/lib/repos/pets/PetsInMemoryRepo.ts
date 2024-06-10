@@ -1,4 +1,7 @@
 import type { PetsRepo, Pet } from "./PetsRepoInterface"
+import SummerImage from './images/summer.webp?w=768&enhanced';
+import WinstonImage from './images/winston.webp?w=768&enhanced';
+import NumiImage from './images/numi.webp?w=768&enhanced';
 
 class PetsInMemoryRepo implements PetsRepo {
   #pets: Pet[] = [
@@ -6,7 +9,7 @@ class PetsInMemoryRepo implements PetsRepo {
       name: 'Summer',
       favoriteActivity: 'Running full-tilt at the park!',
       heroImage: {
-        src: '/images/summer.webp',
+        src: SummerImage,
         alt: 'Summer playfully running on a hardwood floor',
       },
     },
@@ -14,7 +17,7 @@ class PetsInMemoryRepo implements PetsRepo {
       name: 'Winston',
       favoriteActivity: 'Standing around looking regal and handsome',
       heroImage: {
-        src: '/images/winston.webp',
+        src: WinstonImage,
         alt: 'Winston playfully running on a hardwood floor',
       },
     },
@@ -22,7 +25,7 @@ class PetsInMemoryRepo implements PetsRepo {
       name: 'Numi',
       favoriteActivity: 'Playing with Summer!',
       heroImage: {
-        src: '/images/numi.webp',
+        src: NumiImage,
         alt: 'Numi playfully running on a hardwood floor',
       },
     },

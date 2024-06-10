@@ -6,7 +6,7 @@
 
 <div class="card glass w-96">
 	<figure>
-		<img src={heroImage.src} alt={heroImage.alt} />
+		<enhanced:img src={heroImage.src} alt={heroImage.alt} />
 	</figure>
 	<div class="card-body">
 		<h2 class="card-title">{name}</h2>
