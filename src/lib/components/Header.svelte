@@ -8,10 +8,8 @@
 	</div>
 	<div class="flex-none">
 		<ul class="menu menu-horizontal items-center px-1">
-			<li><a href="/">about</a></li>
-			<li>
-				<button onclick={window.toggleTheme}><ThemeToggleIcon class="w-4" /></button>
-			</li>
+			<li><a href="/contact">contact</a></li>
+			<li><button onclick={window.toggleTheme}><ThemeToggleIcon class="w-4" /></button></li>
 		</ul>
 	</div>
 </div>
