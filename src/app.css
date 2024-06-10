@@ -67,4 +67,66 @@
 	[data-theme='dark'] {
 		color-scheme: dark;
 	}
+
+	body {
+		view-transition-name: body;
+	}
+
+	/* "normal" navigation */
+
+	@keyframes fade-out-to-left {
+		to {
+			opacity: 0%;
+			transform: translate(-50%);
+		}
+	}
+
+	@keyframes slide-from-right {
+		0% {
+			transform: translate(100%);
+		}
+	}
+
+	/* "back" navigation */
+	@keyframes fade-out-to-right {
+		to {
+			opacity: 0%;
+			transform: translate(50%);
+		}
+	}
+
+	@keyframes slide-from-left {
+		0% {
+			transform: translate(-100%);
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		:root::view-transition-old(body) {
+			pointer-events: none;
+			animation: 0.3s ease-out both fade-out-to-left;
+		}
+
+		:root::view-transition-new(body) {
+			pointer-events: none;
+			animation: 0.3s ease-out both slide-from-right;
+		}
+
+		/* "back" navigation */
+		:root[data-back]::view-transition-old(body) {
+			pointer-events: none;
+			animation: 0.3s ease-out both fade-out-to-right;
+		}
+
+		:root[data-back]::view-transition-new(body) {
+			pointer-events: none;
+			animation: 0.3s ease-out both slide-from-left;
+		}
+
+		/* smooth scrolling */
+		:has(:target) {
+			scroll-behavior: smooth;
+			scroll-padding-top: 4rem;
+		}
+	}
 }

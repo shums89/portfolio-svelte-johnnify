@@ -3,13 +3,14 @@
 
 	import Header from '$lib/components/Header.svelte'
 	import Footer from '$lib/components/Footer.svelte'
-	import type { Snippet } from 'svelte'
+	import { onMount, type Snippet } from 'svelte'
 	import { page } from '$app/stores'
+	import { onNavigate } from '$app/navigation'
 
 	const defaultMeta = {
 		title: 'Paulina Puppers 🐶',
 		description: 'Actions shots of tiny friends',
-		ogImagesUrl: '/og.webp'
+		ogImageUrl: '/og.webp'
 	}
 
 	type Props = {
@@ -21,6 +22,30 @@
 	let title = $derived($page.data.meta?.title ? `${$page.data.meta.title} 🐶 Paulina Puppers` : defaultMeta.title)
 	let description = $derived($page.data.meta?.description ? $page.data.meta.description : defaultMeta.description)
 	let ogImageUrl = $derived($page.data.meta?.ogImageUrl ? $page.data.meta.ogImageUrl : defaultMeta.ogImageUrl)
+
+	onNavigate(navigation => {
+		if (document.startViewTransition && navigation.from?.url.href !== navigation.to?.url.href) {
+			if (navigation.delta && navigation.delta < 0) {
+				document.documentElement.dataset.back = 'true'
+			} else {
+				document.documentElement.removeAttribute('data-back')
+			}
+
+			return new Promise(resolve => {
+				document.startViewTransition &&
+					document.startViewTransition(async () => {
+						resolve()
+						await navigation.complete
+					})
+			})
+		}
+	})
+
+	onMount(() => {
+		// Add data-testid now that our app is hydrated
+		// We have Playright "wait" fot this before starting the tests
+		document.documentElement.dataset.testid = 'hydrated'
+	})
 </script>
 
 <svelte:head>
