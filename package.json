@@ -15,6 +15,7 @@
     "update": "ncu -ui --format group --install always"
   },
   "devDependencies": {
+    "@fontsource-variable/shantell-sans": "^5.0.21",
     "@playwright/test": "^1.44.1",
     "@sveltejs/adapter-auto": "^3.2.1",
     "@sveltejs/enhanced-img": "^0.2.1",

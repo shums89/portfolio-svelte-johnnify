@@ -54,6 +54,7 @@
 
 	:root {
 		--font-sans: system-ui, sans-serif;
+		--font-fancy: 'Shantell Sans Variable', ui-serif, serif;
 		--padding-inline: clamp(1rem, 5vw, 3rem);
 		--radius: 1rem;
 	}

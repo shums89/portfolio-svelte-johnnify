@@ -14,6 +14,7 @@ export default {
   theme: {
     fontFamily: {
       sans: 'var(--font-sans)',
+      fancy: 'var(--font-fancy)',
     },
     container: {
       center: true,
