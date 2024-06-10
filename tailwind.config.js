@@ -28,6 +28,9 @@ export default {
         xl: 'var(--shadow-5)',
         '2xl': 'var(--shadow-6)',
       },
+      padding: {
+        inline: 'var(--padding-inline)'
+      },
     },
   },
   daisyui: {
