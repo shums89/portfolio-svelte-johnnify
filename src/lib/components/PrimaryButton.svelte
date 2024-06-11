@@ -5,7 +5,7 @@
 	type Props = {
 		children: Snippet
 	} & HTMLButtonAttributes
-	const { children, class: className, ...restProps } = $props<Props>()
+	let { children, class: className, ...restProps } = $props<Props>()
 </script>
 
 <button {...restProps} class={`${className} btn btn-primary shadow hover:shadow-md`}>{@render children()}</button>

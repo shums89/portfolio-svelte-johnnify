@@ -5,7 +5,7 @@
 		children: Snippet
 		class?: string
 	}
-	const { children, class: className } = $props<Props>()
+	let { children, class: className } = $props<Props>()
 </script>
 
 <h1 class={`${className} font-fancy text-5xl font-semibold text-primary`}>

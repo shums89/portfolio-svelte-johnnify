@@ -4,16 +4,8 @@
 
 	type Props = {
 		children: Snippet
-	} & Omit<HTMLAnchorAttributes, 'target' | 'rel'>
-
+	} & HTMLAnchorAttributes
 	let { children, class: className, ...restProps } = $props<Props>()
 </script>
 
-<a
-	class={`${className} transition hover:brightness-150 dark:hover:brightness-125`}
-	{...restProps}
-	target="_blank"
-	rel="noopener noreferrer"
->
-	{@render children()}
-</a>
+<a {...restProps} class={`${className} btn btn-primary shadow hover:shadow-md`}>{@render children()}</a>
