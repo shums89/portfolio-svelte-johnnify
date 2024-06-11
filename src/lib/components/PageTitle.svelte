@@ -3,10 +3,11 @@
 
 	type Props = {
 		children: Snippet
+		class?: string
 	}
-	const { children } = $props<Props>()
+	const { children, class: className } = $props<Props>()
 </script>
 
-<h1 class="font-fancy text-5xl font-semibold text-primary">
+<h1 class={`${className} font-fancy text-5xl font-semibold text-primary`}>
 	{@render children()}
 </h1>
