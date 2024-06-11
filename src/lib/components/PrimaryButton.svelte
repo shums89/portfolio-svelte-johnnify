@@ -1,10 +1,11 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte'
+	import type { HTMLButtonAttributes } from 'svelte/elements'
 
 	type Props = {
 		children: Snippet
-	}
-	const { children } = $props<Props>()
+	} & HTMLButtonAttributes
+	const { children, class: className, ...restProps } = $props<Props>()
 </script>
 
-<button class="btn btn-primary shadow hover:shadow-md">{@render children()}</button>
+<button {...restProps} class={`${className} btn btn-primary shadow hover:shadow-md`}>{@render children()}</button>
