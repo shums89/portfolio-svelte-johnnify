@@ -1,9 +1,9 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "contact": "contact",
-  "heroCopy": "I take wonderful <strong>action shots</strong> of adorable little friends!",
-  "heroAction": "Reach out!",
-  "bestPetsSection": "Best boys & girls",
-  "petsSummerActivity": "Running full-tilt at the park!",
-  "seeMore": "see more!"
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"contact": "contact",
+	"heroCopy": "I take wonderful <strong>action shots</strong> of adorable little friends!",
+	"heroAction": "Reach out!",
+	"bestPetsSection": "Best boys & girls",
+	"petsSummerActivity": "Running full-tilt at the park!",
+	"seeMore": "see more!"
 }

@@ -6,7 +6,7 @@
 	import YouTube from '$lib/components/icons/YouTube.svelte'
 </script>
 
-<footer class="px-inline footer mt-[5svh] items-center bg-neutral py-4 text-neutral-content">
+<footer class="footer mt-[5svh] items-center bg-neutral px-inline py-4 text-neutral-content">
 	<aside class="grid-flow-col items-center">
 		<svg
 			width="36"
