@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Pet } from '$lib/repos/pets/PetsRepoInterface'
+	import * as m from '$m'
 
 	let { name, heroImage, favoriteActivity } = $props<Pet>()
 </script>
@@ -12,7 +13,7 @@
 		<h2 class="card-title">{name}</h2>
 		<p>{favoriteActivity}</p>
 		<div class="card-actions justify-end">
-			<a class="btn btn-secondary" href="/">see more!</a>
+			<a class="btn btn-secondary" href="/">{m.seeMore()}</a>
 		</div>
 	</div>
 </div>

@@ -7,6 +7,9 @@
 	import { onMount, type Snippet } from 'svelte'
 	import { page } from '$app/stores'
 	import { onNavigate } from '$app/navigation'
+	import { paraglide } from '@inlang/paraglide-js-adapter-sveltekit/vite'
+	import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit'
+	import { i18n } from '$lib/i18n'
 
 	const defaultMeta = {
 		title: 'Paulina Puppers 🐶',
@@ -62,6 +65,8 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<Header />
-{@render children()}
-<Footer />
+<ParaglideJS {i18n}>
+	<Header />
+	{@render children()}
+	<Footer />
+</ParaglideJS>

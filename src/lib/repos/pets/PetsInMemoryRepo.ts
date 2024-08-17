@@ -4,11 +4,13 @@ import WinstonImage from './images/winston.webp?w=768&enhanced'
 import NumiImage from './images/numi.webp?w=768&enhanced'
 import Error from '../../../routes/+error.svelte'
 
+import * as m from '$m'
+
 class PetsInMemoryRepo implements PetsRepo {
 	#pets: Pet[] = [
 		{
 			name: 'Summer',
-			favoriteActivity: 'Running full-tilt at the park!',
+			favoriteActivity: m.petsSummerActivity(),
 			heroImage: {
 				src: SummerImage,
 				alt: 'Summer playfully running on a hardwood floor'
@@ -33,7 +35,7 @@ class PetsInMemoryRepo implements PetsRepo {
 	]
 
 	async getAll(): Promise<Pet[]> {
-		if (Math.random() > 0.5) throw new Error('server went boom')
+		if (Math.random() > 0.7) throw new Error('server went boom')
 		return this.#pets
 	}
 }

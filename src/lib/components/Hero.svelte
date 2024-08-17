@@ -1,9 +1,10 @@
 <script lang="ts">
+	import * as m from '$m'
 	import PrimaryButton from './PrimaryButton.svelte'
 </script>
 
-<section class="px-inline my-8 rounded-lg bg-secondary py-8">
-	<p class="mb-4 text-secondary-content">I take wonderful <strong>action shots</strong> of adorable little friends!</p>
+<section class="my-8 rounded-lg bg-secondary px-inline py-8">
+	<p class="mb-4 text-secondary-content">{@html m.heroCopy()}</p>
 
-	<PrimaryButton>Reach out!</PrimaryButton>
+	<PrimaryButton>{m.heroAction()}</PrimaryButton>
 </section>

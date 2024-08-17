@@ -1,0 +1,9 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "contact": "контакты",
+  "heroCopy": "Я делаю замечательные <strong>снимки</strong> очаровательных маленьких друзей!",
+  "heroAction": "Обращайся!",
+  "bestPetsSection": "Лучшие мальчики и девочки",
+  "petsSummerActivity": "Бегает на полную катушку в парке!",
+  "seeMore": "узнать больше!"
+}
