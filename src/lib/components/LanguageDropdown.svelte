@@ -4,9 +4,10 @@
 	import { availableLanguageTags, languageTag } from '$paraglide/runtime'
 	import Globe from './icons/Globe.svelte'
 
-	const langsToLabels: Record<'en' | 'ru', string> = {
+	const langsToLabels: Record<(typeof availableLanguageTags)[number], string> = {
 		en: 'English',
-		ru: 'Русский'
+		ru: 'Русский',
+		es: 'Espanol'
 	}
 
 	let currentLanguageLabel = $derived(langsToLabels[languageTag()])
