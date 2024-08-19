@@ -1,0 +1,14 @@
+{
+    "name": "Paulina Puppers - Action Photographer",
+    "short_name": "Paulina Puppers",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#c59f60",
+    "background_color": "#20161f",
+    "display": "standalone"
+}
