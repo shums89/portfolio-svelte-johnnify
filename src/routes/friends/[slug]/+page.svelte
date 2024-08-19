@@ -5,7 +5,7 @@
 </script>
 
 <main class="container">
-	<PageTitle class="col-span-2 mb-6">{data.pet.name}</PageTitle>
+	<PageTitle class="col-span-2 mb-6" style={`view-transition-name: hero-name-${data.pet.name}`}>{data.pet.name}</PageTitle>
 	<enhanced:img
 		class="hero-image mb-6 rounded-lg shadow"
 		src={data.pet.heroImage.src}
