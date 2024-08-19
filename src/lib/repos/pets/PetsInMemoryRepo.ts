@@ -6,7 +6,7 @@ import Error from '../../../routes/+error.svelte'
 
 import * as m from '$m'
 
-class PetsInMemoryRepo implements PetsRepo {
+export class PetsInMemoryRepo implements PetsRepo {
 	#pets: Pet[] = [
 		{
 			name: 'Summer',
@@ -35,8 +35,12 @@ class PetsInMemoryRepo implements PetsRepo {
 	]
 
 	async getAll(): Promise<Pet[]> {
-		if (Math.random() > 0.7) throw new Error('server went boom')
+		// if (Math.random() > 0.7) throw new Error('server went boom')
 		return this.#pets
+	}
+
+	async get(slug: string): Promise<Pet | null> {
+		return this.#pets.find(pet => pet.name.toLowerCase() === slug) || null
 	}
 }
 

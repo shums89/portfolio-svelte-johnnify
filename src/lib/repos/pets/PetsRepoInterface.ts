@@ -9,4 +9,5 @@ export type Pet = {
 
 export interface PetsRepo {
 	getAll(): Promise<Pet[]>
+	get(slug: string): Promise<Pet | null>
 }
